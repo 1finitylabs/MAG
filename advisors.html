@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategic Advisors | MAG Business Capital</title>
+<meta name="description" content="Meet the MAG Business Capital Strategic Advisors. Our team offers solutions and advice on business plans, credit, corporate tax, marketing, and corporate structure to help you grow.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== Página de asesores ===== */
+  .advisors-intro{padding:60px 0 10px;text-align:center;}
+  .advisors-intro .container{max-width:760px;}
+  .advisors-intro p{color:var(--muted);font-size:16.5px;}
+
+  .advisor-list{padding:40px 0 70px;}
+  .advisor-row{
+    display:grid;grid-template-columns:280px 1fr;gap:44px;align-items:center;
+    background:var(--white);border:1px solid var(--border);border-radius:20px;
+    padding:34px;margin-bottom:30px;scroll-margin-top:100px;
+    transition:box-shadow .3s ease, transform .3s ease;
+  }
+  .advisor-row:hover{box-shadow:0 18px 44px rgba(15,42,71,.12);transform:translateY(-4px);}
+  .advisor-row:nth-child(even){grid-template-columns:1fr 280px;}
+  .advisor-row:nth-child(even) .advisor-photo{order:2;}
+  .advisor-row:nth-child(even) .advisor-body{order:1;}
+
+  .advisor-photo{position:relative;}
+  .advisor-photo img{
+    width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:16px;
+    box-shadow:0 12px 28px rgba(15,42,71,.18);
+  }
+  .advisor-photo::after{
+    content:"";position:absolute;inset:0;border-radius:16px;
+    border:3px solid var(--gold-light);transform:translate(10px,10px);z-index:-1;
+  }
+  .advisor-body h3{font-size:23px;margin-bottom:4px;}
+  .advisor-body .role{color:var(--gold);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:16px;}
+  .advisor-body p{color:var(--muted);font-size:15px;line-height:1.65;}
+
+  @media(max-width:820px){
+    .advisor-row,
+    .advisor-row:nth-child(even){grid-template-columns:1fr;gap:24px;text-align:center;padding:26px;}
+    .advisor-row:nth-child(even) .advisor-photo{order:0;}
+    .advisor-row:nth-child(even) .advisor-body{order:0;}
+    .advisor-photo{max-width:240px;margin:0 auto;}
+    .advisor-photo::after{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a class="logo" href="index.html#top">
+      <img src="https://static.wixstatic.com/media/6acd54_69796d03eb6545b19b1206e869ec6777~mv2.png/v1/fill/w_262,h_84,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Original%20on%20Transparent.png" alt="MAG Business Capital">
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li>
+          <a href="#">Business Loans ▾</a>
+          <ul class="dropdown">
+            <li><a href="business-loans.html">Business Loans</a></li>
+            <li><a href="line-of-credit.html">Line of Credit</a></li>
+            <li><a href="commercial-loans.html">Commercial Loans</a></li>
+            <li><a href="erc-credit.html">ERC Credit</a></li>
+          </ul>
+        </li>
+        <li><a href="advisors.html">Strategic Advisors</a></li>
+        <li>
+          <a href="#">Articles ▾</a>
+          <ul class="dropdown">
+            <li><a href="articles.html">English Articles</a></li>
+            <li><a href="articles.html">Español Articles</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Resources ▾</a>
+          <ul class="dropdown">
+            <li><a href="business-credit.html">Business Credit</a></li>
+            <li><a href="business-health-insurance.html">Business Health Insurance</a></li>
+            <li><a href="credit-builder.html">Credit Builder</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <span class="phone-mini">407-900-7550</span>
+      <a class="btn btn-gold" href="https://iw.lendflow.com?env=d4taDuOnK5NT1epR4AUXKDHlv8I5Uy2K&viewProduct=1&brandId=950&workflowTemplateId=97a3b38c-6529-4d36-ad87-25d198ef413e&consentTemplateId=01J7KJRV8Y9BBJWDGAAGYP4849" target="_blank" style="padding:11px 22px;">Request Now</a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html#top">Home</a> &nbsp;/&nbsp; Strategic Advisors</div>
+    <h1>Strategic Advisors</h1>
+    <p>We strive to provide a comprehensive suite of services tailored to empower business owners with the knowledge they need to position their businesses for growth.</p>
+  </div>
+</section>
+
+<section class="advisors-intro">
+  <div class="container">
+    <p>MAG Business Capital offers more than just access to capital. Our advisors deliver solutions and guidance across business plans, personal and business credit, corporate tax, marketing and social media, and corporate structure &mdash; so you can run and grow your business successfully.</p>
+    <p style="margin-top:22px;"><a class="btn btn-gold" href="https://calendly.com/magbc/meeting" target="_blank">Schedule Your Free Consultation</a></p>
+  </div>
+</section>
+
+<section class="advisor-list">
+  <div class="container">
+
+    <div class="advisor-row" id="andres-hoyos">
+      <div class="advisor-photo">
+        <img src="https://static.wixstatic.com/media/6acd54_680ccb98cf5e45c586f7f7cce9bcb5b8~mv2.jpg/v1/fill/w_400,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Andres%20Hoyos%20Website.jpg" alt="Andres Hoyos">
+      </div>
+      <div class="advisor-body">
+        <h3>Andres Hoyos</h3>
+        <div class="role">Founder</div>
+        <p>Andres is a respected businessman with more than fifteen years of experience across the insurance, investment and banking industries. He knows firsthand how much capital can accelerate a growing business &mdash; and how hard it can be for small business owners to reach those resources. That's why he built MAG Business Capital: a team of Strategic Advisors devoted to helping owners succeed with expert guidance on growth strategy, funding readiness, and taking their goals to the next level. Driven by a desire to help families build lasting legacies, Andres works closely with ambitious entrepreneurs whose success stories reflect his bold vision and steady commitment.</p>
+      </div>
+    </div>
+
+    <div class="advisor-row" id="susana-tamayo">
+      <div class="advisor-photo">
+        <img src="https://static.wixstatic.com/media/6acd54_56246474faa849eda9a36b7283b7d361~mv2.jpg/v1/fill/w_400,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Susana%20Tamayo%20Web.jpg" alt="Susana Tamayo">
+      </div>
+      <div class="advisor-body">
+        <h3>Susana Tamayo, MSM-HR</h3>
+        <div class="role">Corporate Structure / Business Planning</div>
+        <p>Susana is a highly accomplished executive who held senior positions at Siemens, where she oversaw both domestic and international human capital mobility. Today she runs her own successful consulting practice, giving strategic guidance to small business owners preparing to expand. As a Strategic Advisor to MAG, she draws on that deep expertise to help clients build strong business plans and chart the best path for long-term growth or tactical correction. Outside of work, Susana and her husband share a passion for helping families make America their home, running a nonprofit that offers support and advice along the way.</p>
+      </div>
+    </div>
+
+    <div class="advisor-row" id="gaby-anderez">
+      <div class="advisor-photo">
+        <img src="https://static.wixstatic.com/media/6acd54_d0e95ad482674c0aad4a858c104036c7~mv2.png/v1/fill/w_400,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/gaby-anderez_edited.png" alt="Gaby Anderez">
+      </div>
+      <div class="advisor-body">
+        <h3>Gaby Anderez</h3>
+        <div class="role">Marketing and Social Media Strategist</div>
+        <p>Gaby is a pioneer in the marketing and social media world. With eight years of expertise, she has become a go-to strategist for clients who have grown through her innovative campaigns. As a Strategic Advisor for MAG, she helps business owners build their brands and strengthen their social media presence to drive organic growth and increase recognition. Her agency delivers end-to-end services &mdash; from brand identity to ongoing maintenance &mdash; powered by a keen eye for detail, a solid grasp of industry trends, and the ability to tailor effective strategies to each client's needs.</p>
+      </div>
+    </div>
+
+    <div class="advisor-row" id="vanessa-nava">
+      <div class="advisor-photo">
+        <img src="https://static.wixstatic.com/media/6acd54_a5531168ed8b4d3f9e57ce4ac015434a~mv2.jpg/v1/fill/w_400,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Vanessa%20Nava1_edited_edited.jpg" alt="Vanessa Nava">
+      </div>
+      <div class="advisor-body">
+        <h3>Vanessa Nava</h3>
+        <div class="role">CFO / Business Optimisation Strategies</div>
+        <p>Vanessa is an ambitious entrepreneur and business strategist who brings a creative approach to helping businesses succeed. For the past ten years she has applied sharp financial acumen to deliver CFO services for a wide range of companies. As a Strategic Advisor for MAG, she uses her eye for detail to help businesses amplify their operations by streamlining structure and finances. Her business savvy and strong problem-solving skills make her an invaluable team member who brings clarity and insight to any company's success.</p>
+      </div>
+    </div>
+
+    <div class="advisor-row" id="eric-little">
+      <div class="advisor-photo">
+        <img src="https://static.wixstatic.com/media/6acd54_77c687454ddb47588fa42e1095045eef~mv2.jpg/v1/fill/w_400,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Eric%20Little_edited.jpg" alt="Eric Little">
+      </div>
+      <div class="advisor-body">
+        <h3>Eric Little</h3>
+        <div class="role">SVP, Origination / Commercial Lending</div>
+        <p>Eric is a committed professional with over three decades of experience in sales and marketing. His specialty is commercial real estate lending, a field he has served for the past twenty years by delivering superior support to borrowers. That passion for an outstanding client experience comes through clearly in his role as a Strategic Advisor for MAG. With billions of dollars in loans originated over his career &mdash; each handled with care and attention &mdash; Eric is deeply committed to meeting the highest quality standards at every turn.</p>
+      </div>
+    </div>
+
+    <div class="advisor-row" id="pablo-rendic">
+      <div class="advisor-photo">
+        <img src="https://static.wixstatic.com/media/6acd54_93415a2a8ddf4dc09fd9bcec2b6a95e0~mv2.png/v1/fill/w_400,h_400,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Pablo%20Rendic%20pic.png" alt="Pablo Rendic Olivieri">
+      </div>
+      <div class="advisor-body">
+        <h3>Pablo Rendic Olivieri</h3>
+        <div class="role">Branding / Marketing Business Plan</div>
+        <p>Pablo is an experienced and intrepid marketing professional with more than thirteen years of expertise in marketing and branding. As a strategic partner at MAG, he is dedicated to delivering custom solutions that infuse marketing strategy with innovation. Focused on quality service and successful delivery, he excels at monitoring profitability, budgets, results and deadlines while growing his team's capabilities. His commitment to excellence has produced remarkable marketing plans and campaigns that consistently exceed objectives and reshape how customers engage with brands.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="consult-cta">
+  <div class="container">
+    <h2>Schedule Your Free Consultation With Our Team</h2>
+    <div class="btn-row">
+      <a class="btn btn-gold" href="https://calendly.com/magbc/meeting" target="_blank">Schedule Now</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <a class="logo" href="index.html#top"><img src="https://static.wixstatic.com/media/6acd54_69796d03eb6545b19b1206e869ec6777~mv2.png/v1/fill/w_262,h_84,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Original%20on%20Transparent.png" alt="MAG Business Capital" style="height:40px;margin-bottom:16px;filter:brightness(0) invert(1);"></a>
+      <p>Home Office<br>Orlando, FL 32801</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>407-900-7550</p>
+      <p><a href="mailto:info@magbusinesscapital.com">info@magbusinesscapital.com</a></p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/magbusinesscapital/" target="_blank"><img src="https://static.wixstatic.com/media/11062b_ca1d837ce7194421b781ee7384061a8e~mv2.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_ca1d837ce7194421b781ee7384061a8e~mv2.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/profile.php?id=100087267469130" target="_blank"><img src="https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0fdef751204647a3bbd7eaa2827ed4f9.png" alt="Facebook"></a>
+        <a href="https://www.linkedin.com/company/mag-business-capital/" target="_blank"><img src="https://static.wixstatic.com/media/6ea5b4a88f0b4f91945b40499aa0af00.png/v1/fill/w_32,h_32,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6ea5b4a88f0b4f91945b40499aa0af00.png" alt="LinkedIn"></a>
+      </div>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p><a href="advisors.html">Strategic Advisors</a></p>
+      <p><a href="business-credit.html">Business Credit</a></p>
+      <p><a href="articles.html">Articles</a></p>
+    </div>
+  </div>
+  <p class="disclaimer">Disclaimer: MAG Business Capital may act in different capacities such as Broker, Agent, Partner, Referral, and Affiliate from which MAG Generates revenue in the form of commissions, service fees, and product fees.</p>
+  <div class="footer-bottom">
+    <div class="legal-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms and Conditions</a>
+    </div>
+    <p>&copy;2017-2025 by MAG Business Capital a Milestone Advisory Group LLC Company. All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mainNav = document.getElementById('mainNav');
+  hamburger.addEventListener('click', () => mainNav.classList.toggle('open'));
+  document.querySelectorAll('.main-nav > ul > li').forEach(li => {
+    const link = li.querySelector('a');
+    const dropdown = li.querySelector('.dropdown');
+    if (dropdown) {
+      link.addEventListener('click', (e) => {
+        if (window.innerWidth <= 760) {
+          e.preventDefault();
+          li.classList.toggle('open');
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
