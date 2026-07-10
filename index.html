@@ -104,6 +104,22 @@
     background:var(--border);transition:width .3s ease, background .3s ease;
   }
   .tdots button.active{width:26px;border-radius:6px;background:var(--gold);}
+
+  /* ===== Ajuste del header en móvil / Android =====
+     Separa el botón "Request Now" del logo y evita que queden pegados. */
+  @media(max-width:760px){
+    .nav-wrap{gap:12px;}
+    .logo img{height:40px;}
+    /* empuja el grupo (botón + menú) hacia la derecha, lejos del logo */
+    .header-cta{margin-left:auto;gap:10px;}
+    .header-cta .btn-gold{padding:9px 16px !important;font-size:13.5px;white-space:nowrap;}
+    .hamburger{margin-left:2px;}
+  }
+  @media(max-width:400px){
+    .logo img{height:36px;}
+    .header-cta .btn-gold{padding:8px 13px !important;font-size:12.5px;}
+    .nav-wrap{gap:8px;padding-left:16px;padding-right:16px;}
+  }
 </style>
 </head>
 <body>
