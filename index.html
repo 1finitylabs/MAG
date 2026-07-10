@@ -52,6 +52,58 @@
     font-size:13px;opacity:0;transform:translateY(4px);transition:.3s ease;
   }
   a.team-card:hover .team-link{opacity:1;transform:translateY(0);}
+
+  /* ===== Carrusel de testimonios ===== */
+  .testimonials{padding:88px 0;background:var(--white);overflow:hidden;}
+  .testimonials .section-intro{text-align:center;max-width:620px;margin:0 auto 44px;}
+  .testimonials .section-intro .eyebrow{display:block;margin-bottom:10px;}
+  .testimonials .section-intro h2{font-size:32px;}
+
+  .tcarousel{position:relative;max-width:1000px;margin:0 auto;}
+  .tviewport{overflow:hidden;padding:14px 6px;}
+  .ttrack{display:flex;transition:transform .5s cubic-bezier(.22,.61,.36,1);will-change:transform;}
+  .tslide{min-width:100%;box-sizing:border-box;padding:0 12px;}
+  @media(min-width:900px){ .tslide{min-width:50%;} }  /* 2 tarjetas visibles en desktop */
+
+  .tcard{
+    position:relative;background:var(--bg);border:1px solid var(--border);
+    border-radius:20px;padding:36px 32px 30px;height:100%;
+    box-shadow:0 8px 26px rgba(15,42,71,.06);transition:box-shadow .3s ease, transform .3s ease;
+  }
+  .tcard:hover{box-shadow:0 16px 38px rgba(15,42,71,.12);transform:translateY(-4px);}
+  .tcard .qmark{font-family:'Poppins',sans-serif;font-size:60px;line-height:.6;color:var(--gold-light);margin-bottom:14px;}
+  .tcard .stars{color:var(--gold);font-size:15px;letter-spacing:3px;margin-bottom:14px;}
+  .tcard .tquote{font-size:16px;color:var(--text);font-style:italic;line-height:1.7;margin-bottom:22px;min-height:120px;}
+  .tcard .tfoot{display:flex;align-items:center;gap:14px;border-top:1px solid var(--border);padding-top:18px;}
+  .tcard .tavatar{
+    width:48px;height:48px;border-radius:50%;flex:0 0 48px;
+    background:linear-gradient(145deg,var(--navy),var(--blue));color:var(--gold-light);
+    display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:17px;
+  }
+  .tcard .twho{font-weight:700;color:var(--navy);font-size:14.5px;line-height:1.3;}
+  .tcard .tmeta{font-size:12.5px;color:var(--gold);font-weight:600;margin-top:2px;}
+
+  /* Controles */
+  .tarrow{
+    position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+    width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;
+    background:var(--navy);color:var(--gold-light);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 8px 20px rgba(15,42,71,.25);transition:background .25s ease, transform .25s ease;
+  }
+  .tarrow:hover{background:var(--gold);color:var(--navy-deep);transform:translateY(-50%) scale(1.08);}
+  .tarrow svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
+  .tarrow.prev{left:-8px;}
+  .tarrow.next{right:-8px;}
+  .tarrow:disabled{opacity:.35;cursor:default;}
+  @media(max-width:760px){ .tarrow.prev{left:-2px;} .tarrow.next{right:-2px;} }
+
+  .tdots{display:flex;justify-content:center;gap:9px;margin-top:26px;}
+  .tdots button{
+    width:9px;height:9px;border-radius:50%;border:none;padding:0;cursor:pointer;
+    background:var(--border);transition:width .3s ease, background .3s ease;
+  }
+  .tdots button.active{width:26px;border-radius:6px;background:var(--gold);}
 </style>
 </head>
 <body>
@@ -223,13 +275,90 @@
   </div>
 </section>
 
-<section class="testimonial">
-  <div class="container testimonial-card">
-    <div class="quote-mark">"</div>
-    <p class="quote">I loved the service I received from MAG, as well as the speed with which I got the funds. I will sure use them again when the time comes.</p>
-    <p class="who">Carlos Bautista, Mass Group Solutions</p>
-    <p class="amount">$125K Line of Credit</p>
-    <div class="dots"><span class="active"></span><span></span><span></span><span></span></div>
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-intro">
+      <span class="eyebrow">Testimonials</span>
+      <h2>What our clients say</h2>
+    </div>
+
+    <div class="tcarousel" id="tcarousel">
+      <button class="tarrow prev" id="tprev" aria-label="Previous testimonial">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+
+      <div class="tviewport">
+        <div class="ttrack" id="ttrack">
+
+          <div class="tslide">
+            <div class="tcard">
+              <div class="qmark">&ldquo;</div>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="tquote">I loved the service I received from MAG, as well as the speed with which I got the funds. I will sure use them again when the time comes.</p>
+              <div class="tfoot">
+                <div class="tavatar">CB</div>
+                <div>
+                  <div class="twho">Carlos Bautista</div>
+                  <div class="tmeta">Mass Group Solutions &bull; $125K Line of Credit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tslide">
+            <div class="tcard">
+              <div class="qmark">&ldquo;</div>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="tquote">MAG provided me with a few options and I was able to decide what loan was the best for me. The agents were very knowledgeable and took their time to explain loan and process.</p>
+              <div class="tfoot">
+                <div class="tavatar">DC</div>
+                <div>
+                  <div class="twho">David Carvajal</div>
+                  <div class="tmeta">2D Investments USA &bull; $75K Line of Credit</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tslide">
+            <div class="tcard">
+              <div class="qmark">&ldquo;</div>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="tquote">I did not qualify for a loan but MAG provided advise on their program to build my personal credit and my business credit to qualify for a loan in the coming months.</p>
+              <div class="tfoot">
+                <div class="tavatar">MN</div>
+                <div>
+                  <div class="twho">Michael Newman</div>
+                  <div class="tmeta">Credit Builder Program</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tslide">
+            <div class="tcard">
+              <div class="qmark">&ldquo;</div>
+              <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="tquote">MAG was the only one that got us options for our non-profit, we tried for over a year with many banks and MAG was able to get us 100k in equipment financing.</p>
+              <div class="tfoot">
+                <div class="tavatar">RW</div>
+                <div>
+                  <div class="twho">Richard Wilson</div>
+                  <div class="tmeta">Non-profit &bull; $100K Equipment Loan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <button class="tarrow next" id="tnext" aria-label="Next testimonial">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    <div class="tdots" id="tdots"></div>
   </div>
 </section>
 
@@ -316,6 +445,92 @@
       });
     }
   });
+
+  /* ===== Carrusel de testimonios ===== */
+  (function(){
+    const track = document.getElementById('ttrack');
+    if(!track) return;
+    const slides = Array.from(track.children);
+    const prevBtn = document.getElementById('tprev');
+    const nextBtn = document.getElementById('tnext');
+    const dotsWrap = document.getElementById('tdots');
+    const carousel = document.getElementById('tcarousel');
+
+    let perView = window.matchMedia('(min-width:900px)').matches ? 2 : 1;
+    let index = 0;
+    let autoplayTimer = null;
+    const AUTOPLAY_MS = 6000;
+
+    function maxIndex(){ return Math.max(0, slides.length - perView); }
+
+    function buildDots(){
+      dotsWrap.innerHTML = '';
+      const pages = maxIndex() + 1;
+      for(let i=0;i<pages;i++){
+        const b = document.createElement('button');
+        b.setAttribute('aria-label','Go to testimonial '+(i+1));
+        b.addEventListener('click',()=>{ goTo(i); resetAutoplay(); });
+        dotsWrap.appendChild(b);
+      }
+    }
+
+    function update(){
+      const pct = -(100 / perView) * index;
+      track.style.transform = 'translateX(' + pct + '%)';
+      Array.from(dotsWrap.children).forEach((d,i)=>d.classList.toggle('active', i===index));
+      prevBtn.disabled = index <= 0;
+      nextBtn.disabled = index >= maxIndex();
+      const onlyOnePage = maxIndex() === 0;
+      prevBtn.style.display = onlyOnePage ? 'none' : '';
+      nextBtn.style.display = onlyOnePage ? 'none' : '';
+      dotsWrap.style.display = onlyOnePage ? 'none' : '';
+    }
+
+    function goTo(i){ index = Math.min(Math.max(i,0), maxIndex()); update(); }
+    function next(){ index = index >= maxIndex() ? 0 : index+1; update(); }
+    function prev(){ index = index <= 0 ? maxIndex() : index-1; update(); }
+
+    nextBtn.addEventListener('click',()=>{ next(); resetAutoplay(); });
+    prevBtn.addEventListener('click',()=>{ prev(); resetAutoplay(); });
+
+    // Autoplay (pausa al pasar el cursor o interactuar)
+    function startAutoplay(){ if(maxIndex()>0) autoplayTimer = setInterval(next, AUTOPLAY_MS); }
+    function stopAutoplay(){ clearInterval(autoplayTimer); autoplayTimer = null; }
+    function resetAutoplay(){ stopAutoplay(); startAutoplay(); }
+    carousel.addEventListener('mouseenter', stopAutoplay);
+    carousel.addEventListener('mouseleave', startAutoplay);
+
+    // Teclado
+    carousel.setAttribute('tabindex','0');
+    carousel.addEventListener('keydown',(e)=>{
+      if(e.key==='ArrowRight'){ next(); resetAutoplay(); }
+      if(e.key==='ArrowLeft'){ prev(); resetAutoplay(); }
+    });
+
+    // Swipe / arrastre (táctil y ratón)
+    let startX=0, dragging=false;
+    function down(x){ dragging=true; startX=x; stopAutoplay(); }
+    function up(x){
+      if(!dragging) return; dragging=false;
+      const diff = x - startX;
+      if(Math.abs(diff) > 50){ diff < 0 ? next() : prev(); }
+      startAutoplay();
+    }
+    track.addEventListener('touchstart', e=>down(e.touches[0].clientX), {passive:true});
+    track.addEventListener('touchend', e=>up(e.changedTouches[0].clientX));
+    track.addEventListener('mousedown', e=>{ e.preventDefault(); down(e.clientX); });
+    window.addEventListener('mouseup', e=>up(e.clientX));
+
+    // Recalcular en resize
+    window.addEventListener('resize', ()=>{
+      const newPer = window.matchMedia('(min-width:900px)').matches ? 2 : 1;
+      if(newPer !== perView){ perView = newPer; index = Math.min(index, maxIndex()); buildDots(); update(); }
+    });
+
+    buildDots();
+    update();
+    startAutoplay();
+  })();
 </script>
 
 </body>
